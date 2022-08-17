@@ -24,12 +24,16 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [TD_CAPS_BASE] = ACTION_TAP_DANCE_LAYER_MOVE(KC_CAPS, _BL),
     [TD_ESC_CC] = ACTION_TAP_DANCE_DOUBLE(KC_ESC, LCTL(KC_C)),
 };
+
+// Removed
+// LT(_MACRO, KC_DEL)
+
         
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [_BL] = LAYOUT(TD(TD_ESC_CC), KC_Q, KC_W, KC_F, KC_P, KC_B,                     KC_J, KC_L, KC_U, KC_Y, KC_SCOLON, KC_BSLS, \
-                 OSL(_MACRO), LT(_FN, KC_A), KC_R, KC_S, MT(MOD_LALT, KC_T), KC_G,    KC_M, KC_N, KC_E, KC_I, KC_O, KC_QUOT, \
-                 KC_TRNS, KC_Z, KC_X, KC_C, LT(_SWAP, KC_D), KC_V,                KC_K, KC_H, KC_COMMA, KC_DOT, KC_SLASH, KC_TRNS, \
-                 MT(MOD_LSFT, KC_DEL), LT(_UP, KC_ENT), MT(MOD_LGUI, KC_TAB),     KC_BSPC, LT(_ARROW, KC_SPC), TD(TD_CAPS_WIN)), \
+  [_BL] = LAYOUT(TD(TD_ESC_CC), KC_Q, KC_W, KC_F, KC_P, KC_B,                                                  KC_J, KC_L, KC_U, KC_Y, KC_SCOLON, KC_BSLS, \
+                 OSL(_MACRO), LT(_FN, KC_A), KC_R, MT(MOD_LALT, KC_S), MT(MOD_LSFT | MOD_LALT, KC_T), KC_G,    KC_M, KC_N, KC_E, KC_I, KC_O, KC_QUOT, \
+                 KC_LCTL, KC_Z, KC_X, KC_C, KC_D, KC_V,                                                        KC_K, KC_H, KC_COMMA, KC_DOT, KC_SLASH, KC_TRNS, \
+                 MT(MOD_LSFT, KC_DEL), LT(_UP, KC_TAB), MT(MOD_LGUI, KC_BSPC),     KC_ENT, LT(_ARROW, KC_SPC), TD(TD_CAPS_WIN)), \
   [_WIN] = LAYOUT(KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, \
                   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, \
                   MOD_LGUI, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, \
@@ -46,8 +50,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                     HYPR(KC_M), HYPR(KC_N), HYPR(KC_O), HYPR(KC_P), HYPR(KC_Q), HYPR(KC_R),     HYPR(KC_S), HYPR(KC_T),  HYPR(KC_U), HYPR(KC_V), HYPR(KC_W), HYPR(KC_X), \
                     HYPR(KC_Y), HYPR(KC_Z), HYPR(KC_1), HYPR(KC_2), HYPR(KC_3), HYPR(KC_4),     HYPR(KC_5), HYPR(KC_6), HYPR(KC_7), HYPR(KC_8), HYPR(KC_9), HYPR(KC_0), \
                                                                  KC_TRNS, KC_TRNS, KC_TRNS,       KC_TRNS, KC_TRNS, KC_TRNS), \
-  [_ARROW] = LAYOUT(KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,      KC_TRNS, KC_TRNS, KC_UP, KC_TRNS, KC_TRNS, KC_TRNS, \
-                    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,      KC_TRNS, KC_LEFT, KC_DOWN, KC_RIGHT, KC_TRNS, KC_TRNS, \
+  [_ARROW] = LAYOUT(KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, \
+                    KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,      KC_TRNS, KC_LEFT, KC_DOWN, KC_UP, KC_RIGHT, KC_TRNS, \
                     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, \
                                                KC_TRNS, KC_TRNS, KC_TRNS,      KC_TRNS, KC_TRNS, KC_TRNS), \
   [_SWAP] = LAYOUT(KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, \

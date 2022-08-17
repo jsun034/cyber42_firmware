@@ -1,6 +1,6 @@
 #ifndef CONFIG_H
 #define CONFIG_H
-
+   
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
@@ -22,7 +22,7 @@
 #define MATRIX_ROW_PINS { D2, D3, C6, D0 }
 // A0-A5, 13-9, 6
 #define MATRIX_COL_PINS { F7, F6, F5, F4, F1, F0, C7, D6, B7, B6, B5, D7 }
-#define UNUSED_PINS { D1 }
+#define UNUSED_PINS { D1 }        
 
 /* COL2ROW or ROW2COL */
 #define DIODE_DIRECTION COL2ROW
@@ -34,13 +34,13 @@
 // #endif
 
 /* Set 0 if debouncing isn't needed */
-#define DEBOUNCE 0
+#define DEBOUNCE 7
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE
 
 /* prevent stuck modifiers */
-#define STRICT_LAYER_RELEASE
+// #define STRICT_LAYER_RELEASE
 
 /* AutoShift */
 #define AUTO_SHIFT_TIMEOUT 140

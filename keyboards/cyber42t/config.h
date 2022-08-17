@@ -30,17 +30,17 @@
 /* number of backlight levels */
 
 // #ifdef BACKLIGHT_PIN
-// #define BACKLIGHT_LEVELS 0
+// #define BACKLIGHT_LEVELS 0 
 // #endif
 
 /* Set 0 if debouncing isn't needed */
-#define DEBOUNCE 0
+#define DEBOUNCE 7
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE
 
 /* prevent stuck modifiers */
-#define STRICT_LAYER_RELEASE
+// #define STRICT_LAYER_RELEASE
 
 /* AutoShift */
 #define AUTO_SHIFT_TIMEOUT 140
